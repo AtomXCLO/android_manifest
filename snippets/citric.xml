@@ -29,6 +29,8 @@
 
   <!-- External -->
   <project path="external/selinux" name="android_external_selinux" remote="citric" />
+  <project path="external/colorkt" name="ProtonAOSP/android_external_colorkt" remote="github" revision="sc" />
+  <project path="external/themelib" name="ProtonAOSP/android_external_themelib" remote="github" revision="sc" />
 
   <!-- Frameworks -->
   <project path="frameworks/base" name="android_frameworks_base" remote="citric" />
