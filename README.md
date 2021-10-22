@@ -1,6 +1,6 @@
 About Citric-OS:
 ================
-![CitricOS Image](https://github.com/Citric-OS/android_manifest/blob/slime/assets/citric.jpg)
+![CitricOS Image](https://github.com/Citric-OS/android_manifest/blob/slime/assets/citric-banner.png)
 
 ```bash
 Citric OS is a custom skin based upon AOSP. It targets being unique, essential and stable; providing a pleasing user experience.
