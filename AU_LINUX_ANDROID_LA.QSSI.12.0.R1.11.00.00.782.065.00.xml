@@ -219,6 +219,12 @@
    
     
       
+        <project remote="generated" name="device/qcom/qssi_lite.git" path="device/qcom/qssi_lite" revision="ee50798f42fae8e2d217b0e3f3bbdc65b4830d9f" upstream="refs/heads/qcom-qssi.lnx.12.0.r1-rel" groups="qc-common-sys-intf" />
+      
+    
+   
+    
+      
         <project remote="generated" name="device/qcom/sepolicy.git" path="device/qcom/sepolicy" revision="d54e2720e2fe1f2fe54c754c704afca5bca3d8ae" upstream="refs/heads/sepolicy-sysintf.lnx.12.0.r1-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
       
     
