@@ -29,6 +29,14 @@
            fetch=".."
            revision="sc-v2"/>
 
+  <remote  name="atomx-gitlab"
+           fetch="https://gitlab.com/AtomXCLO"
+           revision="sc-v2"/>
+
+  <remote  name="atomx-devices"
+           fetch="https://github.com/AtomXCLO-Devices"
+           revision="sc-v2"/>
+
   <include name="atomx.xml"/>
 
 </manifest>

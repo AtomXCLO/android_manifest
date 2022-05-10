@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Build and Core -->
+  <project path="art" name="AtomXCLO/android_art" remote="atomx" />
+  <project path="bionic" name="AtomXCLO/android_bionic" remote="atomx" />
+  <project path="build/make" name="AtomXCLO/android_build" remote="atomx" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="AtomXCLO/android_build_soong" remote="atomx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="AtomXCLO/android_bootable_recovery" remote="atomx" />
+
+  <!-- Device -->
+  <project path="device/qcom/common" name="AtomXCLO/android_device_qcom_common" remote="atomx" >
+    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+  </project>
+  <project path="device/qcom/kernelscripts" name="AtomXCLO/android_kernel_build" remote="atomx" >
+    <linkfile dest="vendor/qcom/build/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
+  </project>
+  <project path="device/qcom/sepolicy-legacy" name="AtomXCLO/android_device_qcom_sepolicy-legacy" remote="atomx" />
+  <project path="device/qcom/sepolicy_vndr" name="AtomXCLO/android_device_qcom_sepolicy_vndr" remote="atomx" />
+  <project path="device/qcom/vendor-common" name="AtomXCLO/android_device_qcom_vendor-common" remote="atomx" />
+
+  <!-- External -->
+  <project path="external/arm-optimized-routines" name="AtomXCLO/android_external_arm-optimized-routines" remote="atomx" />
+  <project path="external/exfatprogs" name="AtomXCLO/android_external_exfatprogs" remote="atomx" />
+  <project path="external/f2fs-tools" name="AtomXCLO/android_external_f2fs-tools" remote="atomx" />
+  <project path="external/fastrpc" name="AtomXCLO/android_external_fastrpc" remote="atomx" />
+  <project path="external/jemalloc_new" name="AtomXCLO/android_external_jemalloc-new" remote="atomx" />
+  <project path="external/scudo" name="AtomXCLO/android_external_scudo" remote="atomx" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="AtomXCLO/android_frameworks_av" remote="atomx" />
+  <project path="frameworks/base" name="AtomXCLO/android_frameworks_base" remote="atomx" />
+  <project path="frameworks/native" name="AtomXCLO/android_frameworks_native" remote="atomx" />
+
+  <!-- Hardware -->
+  <project path="hardware/libhardware" name="AtomXCLO/android_hardware_libhardware" remote="atomx" />
+
+  <!-- Manifest -->
+  <project path="manifest" name="AtomXCLO/android_manifest" remote="atomx" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="AtomXCLO/android_packages_apps_Settings" remote="atomx" />
+  <project path="packages/apps/SettingsIntelligence" name="AtomXCLO/android_packages_apps_SettingsIntelligence" remote="atomx" />
+  <project path="packages/apps/ThemePicker" name="AtomXCLO/android_packages_apps_ThemePicker" remote="atomx" />
+  <project path="packages/apps/Launcher3" name="AtomXCLO/android_packages_apps_Launcher3" remote="atomx" />
+  <project path="packages/modules/CellBroadcastService" name="AtomXCLO/android_packages_modules_CellBroadcastService" remote="atomx" />
+  <project path="packages/services/Telecomm" name="AtomXCLO/android_packages_services_Telecomm" remote="atomx" />
+
+  <!-- System -->
+  <project path="system/core" name="AtomXCLO/android_system_core" remote="atomx" />
+  <project path="system/libartpalette" name="AtomXCLO/android_system_libartpalette" remote="atomx" />
+  <project path="system/memory/lmkd" name="AtomXCLO/android_system_memory_lmkd" remote="atomx" />
+  <project path="system/sepolicy" name="AtomXCLO/android_system_sepolicy" remote="atomx" />
+  <project path="system/update_engine" name="AtomXCLO/android_system_update_engine" remote="atomx" />
+  <project path="system/vold" name="AtomXCLO/android_system_vold" remote="atomx" />
+
+  <!-- Tools -->
+  <project path="tools/extract-utils" name="AtomXCLO/android_tools_extract-utils" remote="atomx" />
+
+  <!-- Vendor -->
+  <project path="vendor/atomx" name="AtomXCLO/android_vendor_atomx" remote="atomx" >
+    <linkfile src="build.sh" dest="rom-build.sh" />
+  </project>
+  <project path="vendor/google/gms" name="android_vendor_google_gms" remote="atomx-gitlab" />
+  <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="atomx-gitlab" />
+  <project path="vendor/qcom/common" name="AtomXCLO/proprietary_vendor_qcom_common" remote="atomx" />
+
+  <!-- Vendor (NXP) -->
+  <project path="vendor/nxp/opensource/halimpl" name="AtomXCLO/android_vendor_nxp_opensource_halimpl" remote="atomx" />
+
+  <!-- Vendor (QCOM) -->
+  <project path="vendor/codeaurora/commonsys/telephony" name="AtomXCLO/android_vendor_codeaurora_commonsys_telephony" remote="atomx" />
+  <project path="vendor/qcom/opensource/commonsys/fm" name="AtomXCLO/android_vendor_qcom-opensource_fm-commonsys" remote="atomx" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="AtomXCLO/android_vendor_qcom-opensource_bluetooth-commonsys-intf" remote="atomx" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="AtomXCLO/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="atomx" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="AtomXCLO/android_vendor_qcom_opensource_commonsys-intf_display" remote="atomx" >
+    <linkfile dest="vendor/qcom/defs/product-defs/system/display-product-system.mk" src="config/display-product-system.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-interfaces-product.mk" src="config/display-interfaces-product.mk" />
+  </project>
+  <project path="vendor/qcom/opensource/commonsys-intf/wfd" name="AtomXCLO/android_vendor_qcom_opensource_commonsys-intf_wfd" remote="atomx" />
+  <project path="vendor/qcom/opensource/power" name="AtomXCLO/android_vendor_qcom-opensource_power" remote="atomx" />
+  <project path="vendor/qcom/opensource/vibrator" name="AtomXCLO/android_vendor_qcom-opensource_vibrator" remote="atomx" />
+
+</manifest>

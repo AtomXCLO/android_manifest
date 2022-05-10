@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Build and Core -->
+  <remove-project name="platform/art" />
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/build_repo" />
+  <remove-project name="platform/build/soong" />
+
+  <!-- Bootable -->
+  <remove-project name="platform/bootable/recovery" />
+
   <!-- Device -->
   <remove-project name="device/amlogic/yukawa"/>
   <remove-project name="device/amlogic/yukawa-kernel"/>
@@ -27,6 +36,21 @@
   <remove-project name="device/google/trout"/>
   <remove-project name="device/google/vrservices"/>
   <remove-project name="device/sample"/>
+  <remove-project name="device/qcom/common" />
+  <remove-project name="device/qcom/sepolicy_vndr" />
+  <remove-project name="device/qcom/vendor-common" />
+
+  <!-- External -->
+  <remove-project name="platform/external/arm-optimized-routines" />
+  <remove-project name="platform/external/f2fs-tools" />
+  <remove-project name="platform/external/fastrpc" />
+  <remove-project name="platform/external/jemalloc_new" />
+  <remove-project name="platform/external/scudo" />
+
+  <!-- Frameworks -->
+  <remove-project name="platform/frameworks/av" />
+  <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/native" />
 
   <!-- Hardware (NXP) -->
   <remove-project name="platform/hardware/nxp/nfc" />
@@ -36,9 +60,11 @@
   <remove-project name="platform/hardware/qcom/audio" />
   <remove-project name="platform/hardware/qcom/display" />
   <remove-project name="platform/hardware/qcom/gps" />
+  <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/qcom/media" />
 
   <!-- Kernel -->
+  <remove-project name="kernel/build" />
   <remove-project name="kernel/msm-5.4" />
   <remove-project name="platform/vendor/opensource/audio-kernel" />
   <remove-project name="platform/vendor/opensource/camera-kernel" />
@@ -51,6 +77,14 @@
   <remove-project name="platform/vendor/qcom-opensource/wlan/fw-api" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" />
+
+  <!-- Packages -->
+  <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/packages/apps/SettingsIntelligence" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/apps/Launcher3" />
+  <remove-project name="platform/packages/modules/CellBroadcastService" />
+  <remove-project name="platform/packages/services/Telecomm" />
 
   <!-- Prebuilts -->
   <remove-project name="kernel/prebuilts/4.19/arm64"/>
@@ -66,10 +100,30 @@
   <remove-project name="platform/prebuilts/android-emulator" />
   <remove-project name="platform/prebuilts/qemu-kernel" />
 
+  <!-- System -->
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/libartpalette" />
+  <remove-project name="platform/system/memory/lmkd" />
+  <remove-project name="platform/system/sepolicy" />
+  <remove-project name="platform/system/update_engine" />
+  <remove-project name="platform/system/vold" />
+
   <!-- Vendor -->
   <remove-project name="platform/packages/apps/Mms" />
   <remove-project name="platform/packages/apps/SnapdragonCamera" />
   <remove-project name="platform/packages/apps/SnapdragonMusic" />
   <remove-project name="platform/vendor/codeaurora/packages/apps/SoundRecorder" />
+
+  <!-- Vendor (NXP) -->
+  <remove-project name="platform/vendor/nxp/opensource/halimpl" />
+
+  <!-- Vendor (QCOM) -->
+  <remove-project name="platform/vendor/codeaurora/telephony" />
+  <remove-project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" />
+  <remove-project name="platform/vendor/qcom-opensource/data-ipa-cfg-mgr" />
+  <remove-project name="platform/vendor/qcom-opensource/display-commonsys-intf" />
+  <remove-project name="platform/vendor/qcom-opensource/fm-commonsys" />
+  <remove-project name="platform/vendor/qcom-opensource/power" />
+  <remove-project name="platform/vendor/qcom-opensource/vibrator" />
 
 </manifest>
