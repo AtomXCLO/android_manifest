@@ -39,4 +39,13 @@
 
   <include name="atomx.xml"/>
 
+  <!-- EXTERNAL -->
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com" />
+
+  <include name="external.xml"/>
+
 </manifest>
