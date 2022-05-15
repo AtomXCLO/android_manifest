@@ -8,4 +8,7 @@
   <!-- LineageOS -->
   <project path="prebuilts/extract-tools" name="LineageOS/android_prebuilts_extract-tools" remote="github" revision="lineage-19.1"/>
 
+  <!-- Pixel Experience -->
+  <project path="vendor/pixel-framework" name="PixelExperience/vendor_pixel-framework" remote="github" revision="twelve"/>
+
 </manifest>
