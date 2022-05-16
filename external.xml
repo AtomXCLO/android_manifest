@@ -9,6 +9,8 @@
   <project path="prebuilts/extract-tools" name="LineageOS/android_prebuilts_extract-tools" remote="github" revision="lineage-19.1"/>
 
   <!-- Pixel Experience -->
+  <project path="external/faceunlock" name="external_faceunlock" remote="pixel-gitlab" revision="twelve"/>
+  <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="github" revision="twelve"/>
   <project path="vendor/pixel-framework" name="PixelExperience/vendor_pixel-framework" remote="github" revision="twelve"/>
 
 </manifest>

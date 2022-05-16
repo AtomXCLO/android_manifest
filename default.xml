@@ -46,6 +46,9 @@
   <remote  name="gitlab"
            fetch="https://gitlab.com" />
 
+  <remote name="pixel-gitlab"
+          fetch="https://gitlab.pixelexperience.org/android" />
+
   <include name="external.xml"/>
 
 </manifest>
