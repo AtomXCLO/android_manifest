@@ -54,8 +54,6 @@
   <!-- Packages -->
   <project path="packages/apps/Settings" name="AtomXCLO/android_packages_apps_Settings" remote="atomx" />
   <project path="packages/apps/SettingsIntelligence" name="AtomXCLO/android_packages_apps_SettingsIntelligence" remote="atomx" />
-  <project path="packages/apps/ThemePicker" name="AtomXCLO/android_packages_apps_ThemePicker" remote="atomx" />
-  <project path="packages/apps/Launcher3" name="AtomXCLO/android_packages_apps_Launcher3" remote="atomx" />
   <project path="packages/modules/CellBroadcastService" name="AtomXCLO/android_packages_modules_CellBroadcastService" remote="atomx" />
   <project path="packages/services/Telecomm" name="AtomXCLO/android_packages_services_Telecomm" remote="atomx" />
 
@@ -75,7 +73,6 @@
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/google/gms" name="android_vendor_google_gms" remote="atomx-gitlab" clone-depth="1" />
-  <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="atomx-gitlab" clone-depth="1" />
   <project path="vendor/qcom/common" name="AtomXCLO/proprietary_vendor_qcom_common" remote="atomx" />
 
   <!-- Vendor (NXP) -->
