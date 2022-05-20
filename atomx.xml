@@ -38,6 +38,7 @@
   <project path="external/f2fs-tools" name="AtomXCLO/android_external_f2fs-tools" remote="atomx" />
   <project path="external/fastrpc" name="AtomXCLO/android_external_fastrpc" remote="atomx" />
   <project path="external/jemalloc_new" name="AtomXCLO/android_external_jemalloc-new" remote="atomx" />
+  <project path="external/libvpx" name="AtomXCLO/android_external_libvpx" remote="atomx" />
   <project path="external/scudo" name="AtomXCLO/android_external_scudo" remote="atomx" />
 
   <!-- Frameworks -->

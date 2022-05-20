@@ -45,6 +45,7 @@
   <remove-project name="platform/external/f2fs-tools" />
   <remove-project name="platform/external/fastrpc" />
   <remove-project name="platform/external/jemalloc_new" />
+  <remove-project name="platform/external/libvpx" />
   <remove-project name="platform/external/scudo" />
 
   <!-- Frameworks -->
