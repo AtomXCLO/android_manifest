@@ -68,9 +68,22 @@ Finally to build
 
 From root directory of Project, perform following commands in terminal
 
-
 ```bash
-./rom-build.sh [DEVICE] [args]
+Usage: ./rom-build.sh <device> [options]
+
+Options:
+  -h, --help            Display this help message
+  -c, --clean           Wipe the tree before building
+  -i, --installclean    Dirty build - Use 'installclean'
+  -r, --repo-sync       Sync before building
+  -t, --build-type      Specify build type
+  -j, --jobs            Specify jobs/threads to use
+  -m, --module          Build a specific module
+  -s, --sign-keys       Specify path to sign key mappings
+  -p, --pwfile          Specify path to sign key password file
+  -b, --backup-unsigned Store a copy of unsignied package along with signed
+  -d, --delta           Generate a delta ota from the specified target_files zip
+  -z, --imgzip          Generate fastboot flashable image zip from signed target_files
 ```
 
 -----------------------------------------------------------------------------
