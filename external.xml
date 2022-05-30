@@ -5,6 +5,9 @@
   <project path="packages/apps/ParanoidDoze" name="AOSPA/android_packages_apps_ParanoidDoze" remote="github" revision="sapphire"/>
   <project path="vendor/qcom/sdclang" name="ThankYouMario/proprietary_vendor_qcom_sdclang" remote="github" revision="12" clone-depth="1"/>
 
+  <!-- GrapheneOS -->
+  <project path="external/Camera" name="GrapheneOS/platform_external_Camera" remote="github" revision="12.1"/>
+
   <!-- Kdrag0n -->
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main"/>
 
