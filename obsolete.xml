@@ -41,6 +41,7 @@
   <remove-project name="device/qcom/vendor-common" />
 
   <!-- External -->
+  <remove-project name="platform/external/OpenCSD" />
   <remove-project name="platform/external/arm-optimized-routines" />
   <remove-project name="platform/external/f2fs-tools" />
   <remove-project name="platform/external/fastrpc" />

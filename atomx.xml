@@ -33,6 +33,7 @@
   <project path="device/qcom/vendor-common" name="AtomXCLO/android_device_qcom_vendor-common" remote="atomx" />
 
   <!-- External -->
+  <project path="external/OpenCSD" name="AtomXCLO/android_external_OpenCSD" remote="atomx" />
   <project path="external/arm-optimized-routines" name="AtomXCLO/android_external_arm-optimized-routines" remote="atomx" />
   <project path="external/exfatprogs" name="AtomXCLO/android_external_exfatprogs" remote="atomx" />
   <project path="external/f2fs-tools" name="AtomXCLO/android_external_f2fs-tools" remote="atomx" />
