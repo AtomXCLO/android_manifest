@@ -27,6 +27,7 @@
   <!-- AtomX -->
   <remote  name="atomx"
            fetch=".."
+           review="review.atomx-devs.org"
            revision="sc-v2"/>
 
   <remote  name="atomx-gitlab"
