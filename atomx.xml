@@ -75,6 +75,7 @@
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/google/gms" name="android_vendor_google_gms" remote="atomx-gitlab" clone-depth="1" />
+  <project path="vendor/pixel-framework" name="AtomXCLO/android_vendor_pixel-framework" remote="atomx" />
   <project path="vendor/qcom/common" name="AtomXCLO/proprietary_vendor_qcom_common" remote="atomx" />
 
   <!-- Vendor (NXP) -->
