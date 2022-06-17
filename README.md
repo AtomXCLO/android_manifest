@@ -98,11 +98,11 @@ Following the standard workflow
 
 ```bash
 # Start by going to the root of the source tree
-$ cd WORKSPACE
+$ cd ~/atomx
 
 # Create a new branch on the specific project you are going to work on
-# For example, `repo start fix-clock AtomXCLO/android_frameworks_base`
-$ repo start BRANCH AtomXCLO/PROJECT
+# For example, `repo start fix-clock android_frameworks_base`
+$ repo start BRANCH PROJECT
 # You can also use the project path in place of the project name.
 # The PROJECT_DIR is the portion after the android_ prefix on
 # the AtomXCLO Github.  For example, android_frameworks_base translates
@@ -121,8 +121,8 @@ $ git add -A
 $ git commit -a -s
 
 # Upload your changes
-$ cd WORKSPACE
-$ repo upload AtomXCLO/PROJECT
+$ cd ~/atomx
+$ repo upload PROJECT
 # or
 $ repo upload PROJECT_DIR
 ```
@@ -142,7 +142,7 @@ $ git add -A
 $ git commit -a -s
 
 # Upload your changes
-$ git push ssh://USERNAME@review.atomx-devs.org:29418/AtomXCLO/PROJECT HEAD:refs/for/sc-v2
+$ git push ssh://USERNAME@review.atomx-devs.org:29418/PROJECT HEAD:refs/for/sc-v2
 ```
 
 Extra commands for Gerrit
@@ -150,16 +150,16 @@ Extra commands for Gerrit
 
 ```bash
 # If you desire to upload a change as private use the below command
-$ git push ssh://USERNAME@review.atomx-devs.org:29418/AtomXCLO/PROJECT HEAD:refs/for/sc-v2%private
+$ git push ssh://USERNAME@review.atomx-devs.org:29418/PROJECT HEAD:refs/for/sc-v2%private
 
 # If you desire to upload a change as W.I.P(Work in Progress) use the below command
-$ git push ssh://USERNAME@review.atomx-devs.org:29418/AtomXCLO/PROJECT HEAD:refs/for/sc-v2%wip
+$ git push ssh://USERNAME@review.atomx-devs.org:29418/PROJECT HEAD:refs/for/sc-v2%wip
 
 # After that, if you want to make the commit public you can use the UI tools on AtomXCLO Gerrit website, or use the below command
-$ git push ssh://USERNAME@review.atomx-devs.org:29418/AtomXCLO/PROJECT HEAD:refs/for/sc-v2%remove-private
+$ git push ssh://USERNAME@review.atomx-devs.org:29418/PROJECT HEAD:refs/for/sc-v2%remove-private
 
 # If you want to unset the W.I.P status on your commit, you can use UI tools on AtomXCLO Gerrit website, or use the below command
-$ git push ssh://USERNAME@review.atomx-devs.org:29418/AtomXCLO/PROJECT HEAD:refs/for/sc-v2%ready
+$ git push ssh://USERNAME@review.atomx-devs.org:29418/PROJECT HEAD:refs/for/sc-v2%ready
 ```
 
 Making additional changes
