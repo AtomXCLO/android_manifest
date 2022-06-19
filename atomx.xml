@@ -54,6 +54,7 @@
   <project path="manifest" name="AtomXCLO/android_manifest" remote="atomx" />
 
   <!-- Packages -->
+  <project path="packages/apps/GameSpace" name="AtomXCLO/android_packages_apps_GameSpace" remote="atomx" />
   <project path="packages/apps/Settings" name="AtomXCLO/android_packages_apps_Settings" remote="atomx" />
   <project path="packages/apps/SettingsIntelligence" name="AtomXCLO/android_packages_apps_SettingsIntelligence" remote="atomx" />
   <project path="packages/modules/CellBroadcastService" name="AtomXCLO/android_packages_modules_CellBroadcastService" remote="atomx" />
