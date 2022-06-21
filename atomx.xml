@@ -30,7 +30,6 @@
   </project>
   <project path="device/qcom/sepolicy-legacy" name="AtomXCLO/android_device_qcom_sepolicy-legacy" remote="atomx" />
   <project path="device/qcom/sepolicy_vndr" name="AtomXCLO/android_device_qcom_sepolicy_vndr" remote="atomx" />
-  <project path="device/qcom/vendor-common" name="AtomXCLO/android_device_qcom_vendor-common" remote="atomx" />
 
   <!-- External -->
   <project path="external/arm-optimized-routines" name="AtomXCLO/android_external_arm-optimized-routines" remote="atomx" />

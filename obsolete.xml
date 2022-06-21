@@ -38,7 +38,6 @@
   <remove-project name="device/sample"/>
   <remove-project name="device/qcom/common" />
   <remove-project name="device/qcom/sepolicy_vndr" />
-  <remove-project name="device/qcom/vendor-common" />
 
   <!-- External -->
   <remove-project name="platform/external/arm-optimized-routines" />
