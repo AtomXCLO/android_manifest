@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
-  <default revision="dummy_revision" sync-c="true" sync-tags="false"/>
+  <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
   <project remote="clo-la" name="device/amlogic/yukawa" path="device/amlogic/yukawa" revision="16945b0868cc46dc251df8069b9acb7ea2cc42c2" upstream="refs/heads/ks-aosp.lnx.3.0.r4-rel" groups="aosp-android11-release,device,pdk,yukawa,qc-common-sys"/>
   <project remote="clo-la" name="device/amlogic/yukawa-kernel" path="device/amlogic/yukawa-kernel" revision="7807a99270a74b5fdf39e1b8d6892911c38245e0" upstream="refs/heads/ks-aosp.lnx.3.0.r4-rel" groups="aosp-android11-release,device,pdk,yukawa,qc-common-sys"/>
   <project remote="clo-la" name="device/common" path="device/common" revision="004c1b5e3982e59f4adef0209af1c15cbdcb4afe" upstream="refs/heads/ks-aosp.lnx.3.0.r4-rel" groups="aosp-android11-release,pdk,pdk-cw-fs,qc-common-sys"/>
