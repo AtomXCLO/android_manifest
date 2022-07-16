@@ -63,7 +63,6 @@
   <project path="system/core" name="AtomXCLO/android_system_core" remote="atomx" />
   <project path="system/extras" name="AtomXCLO/android_system_extras" remote="atomx" />
   <project path="system/libartpalette" name="AtomXCLO/android_system_libartpalette" remote="atomx" />
-  <project path="system/memory/lmkd" name="AtomXCLO/android_system_memory_lmkd" remote="atomx" />
   <project path="system/sepolicy" name="AtomXCLO/android_system_sepolicy" remote="atomx" />
   <project path="system/update_engine" name="AtomXCLO/android_system_update_engine" remote="atomx" />
   <project path="system/vold" name="AtomXCLO/android_system_vold" remote="atomx" />
