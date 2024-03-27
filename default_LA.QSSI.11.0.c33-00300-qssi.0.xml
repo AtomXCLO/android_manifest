@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+  <default remote="clo" revision="LA.QSSI.11.0.c33"/>
+  <project name="device/amlogic/yukawa" groups="aosp-android11-release,device,pdk,yukawa,qc-common-sys"/>
+  <project name="device/amlogic/yukawa-kernel" groups="aosp-android11-release,device,pdk,yukawa,qc-common-sys" clone-depth="2"/>
+  <project name="device/common" groups="aosp-android11-release,pdk,pdk-cw-fs,qc-common-sys"/>
+  <project name="device/generic/arm64" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/armv7-a-neon" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/art" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/car" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/common" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/goldfish" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/goldfish-opengl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="device/generic/mini-emulator-arm64" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/mini-emulator-armv7-a-neon" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/mini-emulator-x86" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/mini-emulator-x86_64" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/opengl-transport" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/qemu" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/trusty" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/uml" groups="aosp-android11-release,device,pdk,qc-common-sys"/>
+  <project name="device/generic/x86" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/generic/x86_64" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/google/atv" groups="aosp-android11-release,broadcom_pdk,device,generic_fs,pdk,qc-common-sys"/>
+  <project name="device/google/contexthub" groups="aosp-android11-release,device,pdk,qc-common-sys"/>
+  <project name="device/google/cuttlefish" groups="aosp-android11-release,device,pdk,qc-common-sys"/>
+  <project name="device/google/cuttlefish_kernel" groups="aosp-android11-release,device,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="device/google/cuttlefish_vmm" groups="aosp-android11-release,device,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="device/google/vrservices" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/google_car" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="device/linaro/dragonboard" groups="aosp-android11-release,device,dragonboard,pdk,qc-common-sys"/>
+  <project name="device/linaro/dragonboard-kernel" groups="aosp-android11-release,device,dragonboard,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="device/linaro/poplar" groups="aosp-android11-release,device,pdk,poplar,qc-common-sys"/>
+  <project name="device/linaro/poplar-kernel" groups="aosp-android11-release,device,pdk,poplar,qc-common-sys" clone-depth="1"/>
+  <project name="device/qcom/qssi" groups="qc-common-sys-intf,vsdk"/>
+  <project name="device/qcom/qssi_32" groups="qc-common-sys,vsdk"/>
+  <project name="device/qcom/qssi_32go" groups="qc-common-sys,vsdk"/>
+  <project name="device/qcom/sepolicy" groups="qc-common-sys-intf,vsdk"/>
+  <project name="device/sample" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="kernel/configs" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="kernel/prebuilts/4.19/arm64" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="kernel/tests" groups="aosp-android11-release,pdk,vts,qc-common-sys"/>
+  <project name="platform/art" path="art" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/bionic" path="bionic" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/build_repo" path="build/make" groups="aosp-android11-release,pdk,qc-common-sys-intf">
+    <copyfile src="core/root.mk" dest="Makefile"/>
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk"/>
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default"/>
+    <linkfile src="core" dest="build/core"/>
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh"/>
+    <linkfile src="target" dest="build/target"/>
+    <linkfile src="tools" dest="build/tools"/>
+  </project>
+  <project name="platform/build/blueprint" path="build/blueprint" groups="aosp-android11-release,pdk,tradefed,qc-common-sys-intf"/>
+  <project name="platform/build/soong" path="build/soong" groups="aosp-android11-release,pdk,tradefed,cyborg,qc-common-sys-intf">
+    <linkfile src="root.bp" dest="Android.bp"/>
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash"/>
+  </project>
+  <project name="platform/compatibility/cdd" path="compatibility/cdd" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/cts" path="cts" groups="aosp-android11-release,cts,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/dalvik" path="dalvik" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/developers/build" path="developers/build" groups="aosp-android11-release,developers,pdk,qc-common-sys"/>
+  <project name="platform/development" path="development" groups="aosp-android11-release,developers,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/FP16" path="external/FP16" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/FXdiv" path="external/FXdiv" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/ImageMagick" path="external/ImageMagick" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/OpenCSD" path="external/OpenCSD" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/Reactive-Extensions/RxCpp" path="external/Reactive-Extensions/RxCpp" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/XNNPACK" path="external/XNNPACK" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/aac" path="external/aac" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/adeb" path="external/adeb" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/adhd" path="external/adhd" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/android-clat" path="external/android-clat" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/androidplot" path="external/androidplot" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/angle" path="external/angle" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/ant-glob" path="external/ant-glob" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/ant-wireless/hidl" path="external/ant-wireless/hidl" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/external/antlr" path="external/antlr" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/apache-commons-bcel" path="external/apache-commons-bcel" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/apache-commons-compress" path="external/apache-commons-compress" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/apache-commons-math" path="external/apache-commons-math" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/apache-harmony" path="external/apache-harmony" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/apache-http" path="external/apache-http" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/apache-xml" path="external/apache-xml" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/arm-optimized-routines" path="external/arm-optimized-routines" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/arm-trusted-firmware" path="external/arm-trusted-firmware" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/autotest" path="external/autotest" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/external/avb" path="external/avb" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/bc" path="external/bc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/bcc" path="external/bcc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/blktrace" path="external/blktrace" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/boringssl" path="external/boringssl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/bouncycastle" path="external/bouncycastle" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/brotli" path="external/brotli" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/bsdiff" path="external/bsdiff" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/bzip2" path="external/bzip2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/caliper" path="external/caliper" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/capstone" path="external/capstone" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/catch2" path="external/catch2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/cblas" path="external/cblas" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/cbor-java" path="external/cbor-java" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/chromium-libpac" path="external/chromium-libpac" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/chromium-trace" path="external/chromium-trace" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/chromium-webview" path="external/chromium-webview" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/external/clang" path="external/clang" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/cldr" path="external/cldr" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/cn-cbor" path="external/cn-cbor" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/compiler-rt" path="external/compiler-rt" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/conscrypt" path="external/conscrypt" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/cpu_features" path="external/cpu_features" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/cpuinfo" path="external/cpuinfo" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/crcalc" path="external/crcalc" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/cros/system_api" path="external/cros/system_api" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/crosvm" path="external/crosvm" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/curl" path="external/curl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/dagger2" path="external/dagger2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/deqp" path="external/deqp" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/deqp-deps/SPIRV-Headers" path="external/deqp-deps/SPIRV-Headers" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/deqp-deps/SPIRV-Tools" path="external/deqp-deps/SPIRV-Tools" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/deqp-deps/amber" path="external/deqp-deps/amber" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/deqp-deps/glslang" path="external/deqp-deps/glslang" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/desugar" path="external/desugar" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/dexmaker" path="external/dexmaker" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/dlmalloc" path="external/dlmalloc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/dng_sdk" path="external/dng_sdk" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/dnsmasq" path="external/dnsmasq" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/doclava" path="external/doclava" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/dokka" path="external/dokka" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/drm_hwcomposer" path="external/drm_hwcomposer" groups="aosp-android11-release,drm_hwcomposer,pdk-fs,qc-common-sys"/>
+  <project name="platform/external/drrickorang" path="external/drrickorang" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/dtc" path="external/dtc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/dynamic_depth" path="external/dynamic_depth" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/easymock" path="external/easymock" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/eigen" path="external/eigen" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/elfutils" path="external/elfutils" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/emma" path="external/emma" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/error_prone" path="external/error_prone" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/ethtool" path="external/ethtool" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/exoplayer" path="external/exoplayer" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/expat" path="external/expat" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/f2fs-tools" path="external/f2fs-tools" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/fastrpc" path="external/fastrpc" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/fdlibm" path="external/fdlibm" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/fec" path="external/fec" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/flac" path="external/flac" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/flatbuffers" path="external/flatbuffers" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/fmtlib" path="external/fmtlib" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/fonttools" path="external/fonttools" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/freetype" path="external/freetype" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/fsck_msdos" path="external/fsck_msdos" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/fsverity-utils" path="external/fsverity-utils" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/gemmlowp" path="external/gemmlowp" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/gflags" path="external/gflags" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/giflib" path="external/giflib" groups="aosp-android11-release,pdk,qcom_msm8x26,qc-common-sys-intf"/>
+  <project name="platform/external/glide" path="external/glide" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/golang-protobuf" path="external/golang-protobuf" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-benchmark" path="external/google-benchmark" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-breakpad" path="external/google-breakpad" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/external/google-fonts/arbutus-slab" path="external/google-fonts/arbutus-slab" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/arvo" path="external/google-fonts/arvo" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/barlow" path="external/google-fonts/barlow" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/big-shoulders-text" path="external/google-fonts/big-shoulders-text" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/carrois-gothic-sc" path="external/google-fonts/carrois-gothic-sc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-fonts/coming-soon" path="external/google-fonts/coming-soon" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-fonts/cutive-mono" path="external/google-fonts/cutive-mono" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-fonts/dancing-script" path="external/google-fonts/dancing-script" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-fonts/fraunces" path="external/google-fonts/fraunces" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/karla" path="external/google-fonts/karla" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/lato" path="external/google-fonts/lato" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/lustria" path="external/google-fonts/lustria" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/rubik" path="external/google-fonts/rubik" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fonts/source-sans-pro" path="external/google-fonts/source-sans-pro" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-fonts/zilla-slab" path="external/google-fonts/zilla-slab" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/google-fruit" path="external/google-fruit" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/google-styleguide" path="external/google-styleguide" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/googletest" path="external/googletest" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/gptfdisk" path="external/gptfdisk" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/grpc-grpc" path="external/grpc-grpc" groups="aosp-android11-release,pdk,tradefed,qc-common-sys-intf"/>
+  <project name="platform/external/grpc-grpc-java" path="external/grpc-grpc-java" groups="aosp-android11-release,pdk,tradefed,qc-common-sys"/>
+  <project name="platform/external/guava" path="external/guava" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/guice" path="external/guice" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/gwp_asan" path="external/gwp_asan" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/hamcrest" path="external/hamcrest" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng" groups="aosp-android11-release,pdk,qcom_msm8x26,qc-common-sys-intf"/>
+  <project name="platform/external/honggfuzz" path="external/honggfuzz" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/hyphenation-patterns" path="external/hyphenation-patterns" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/icu" path="external/icu" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/igt-gpu-tools" path="external/igt-gpu-tools" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/image_io" path="external/image_io" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/ims" path="external/ims" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/iperf3" path="external/iperf3" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/iproute2" path="external/iproute2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/ipsec-tools" path="external/ipsec-tools" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/iptables" path="external/iptables" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/iputils" path="external/iputils" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/iw" path="external/iw" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/jacoco" path="external/jacoco" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jarjar" path="external/jarjar" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/javaparser" path="external/javaparser" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/javapoet" path="external/javapoet" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/javasqlite" path="external/javasqlite" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jcommander" path="external/jcommander" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jdiff" path="external/jdiff" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/jemalloc" path="external/jemalloc" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/jemalloc_new" path="external/jemalloc_new" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jline" path="external/jline" groups="aosp-android11-release,pdk,pdk-fs,tradefed,qc-common-sys-intf"/>
+  <project name="platform/external/jsilver" path="external/jsilver" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jsmn" path="external/jsmn" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/json-c" path="external/json-c" groups="qcom-LA.UM.7.3-incoming,vendor,qc-common-sys-intf,vsdk"/>
+  <project name="platform/external/jsoncpp" path="external/jsoncpp" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jsr305" path="external/jsr305" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/jsr330" path="external/jsr330" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/junit" path="external/junit" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/junit-params" path="external/junit-params" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/kernel-headers" path="external/kernel-headers" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/kmod" path="external/kmod" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/kotlinc" path="external/kotlinc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/kotlinx.coroutines" path="external/kotlinx.coroutines" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/ksoap2" path="external/ksoap2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libaom" path="external/libaom" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libavc" path="external/libavc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libbackup" path="external/libbackup" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libbrillo" path="external/libbrillo" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libcap" path="external/libcap" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libcap-ng" path="external/libcap-ng" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libchrome" path="external/libchrome" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libcups" path="external/libcups" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/libcxx" path="external/libcxx" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libcxxabi" path="external/libcxxabi" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libdaemon" path="external/libdaemon" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libdivsufsort" path="external/libdivsufsort" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libdrm" path="external/libdrm" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libepoxy" path="external/libepoxy" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libese" path="external/libese" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libevent" path="external/libevent" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libexif" path="external/libexif" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libffi" path="external/libffi" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libfuse" path="external/libfuse" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libgav1" path="external/libgav1" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libgsm" path="external/libgsm" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libhevc" path="external/libhevc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libiio" path="external/libiio" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libjpeg-turbo" path="external/libjpeg-turbo" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libkmsxx" path="external/libkmsxx" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libldac" path="external/libldac" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libmpeg2" path="external/libmpeg2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libnetfilter_conntrack" path="external/libnetfilter_conntrack" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libnfnetlink" path="external/libnfnetlink" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libnl" path="external/libnl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libogg" path="external/libogg" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libopus" path="external/libopus" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libpcap" path="external/libpcap" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libphonenumber" path="external/libphonenumber" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libpng" path="external/libpng" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libprotobuf-mutator" path="external/libprotobuf-mutator" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libsrtp2" path="external/libsrtp2" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libtextclassifier" path="external/libtextclassifier" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libunwind" path="external/libunwind" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libunwind_llvm" path="external/libunwind_llvm" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libusb" path="external/libusb" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libutf" path="external/libutf" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libvpx" path="external/libvpx" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libvterm" path="external/libvterm" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libxaac" path="external/libxaac" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libxkbcommon" path="external/libxkbcommon" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/libxml2" path="external/libxml2" groups="aosp-android11-release,libxml2,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/libyuv" path="external/libyuv" groups="aosp-android11-release,libyuv,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/linux-kselftest" path="external/linux-kselftest" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/external/llvm" path="external/llvm" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/lmfit" path="external/lmfit" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/ltp" path="external/ltp" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/lua" path="external/lua" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/lz4" path="external/lz4" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/lzma" path="external/lzma" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/markdown" path="external/markdown" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/mdnsresponder" path="external/mdnsresponder" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/mesa3d" path="external/mesa3d" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/external/mime-support" path="external/mime-support" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/minigbm" path="external/minigbm" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/minijail" path="external/minijail" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/mksh" path="external/mksh" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/mockftpserver" path="external/mockftpserver" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/mockito" path="external/mockito" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/mockwebserver" path="external/mockwebserver" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/modp_b64" path="external/modp_b64" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/mp4parser" path="external/mp4parser" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/mtpd" path="external/mtpd" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/nanohttpd" path="external/nanohttpd" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/nanopb-c" path="external/nanopb-c" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/naver-fonts" path="external/naver-fonts" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/neon_2_sse" path="external/neon_2_sse" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/neven" path="external/neven" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/newfs_msdos" path="external/newfs_msdos" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/nfacct" path="external/nfacct" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/nist-pkits" path="external/nist-pkits" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/nist-sip" path="external/nist-sip" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/nos/host/generic" path="external/nos/host/generic" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/noto-fonts" path="external/noto-fonts" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/oauth" path="external/oauth" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/objenesis" path="external/objenesis" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/oj-libjdwp" path="external/oj-libjdwp" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/okhttp" path="external/okhttp" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/one-true-awk" path="external/one-true-awk" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/opencensus-java" path="external/opencensus-java" groups="aosp-android11-release,pdk,tradefed,qc-common-sys"/>
+  <project name="platform/external/openssh" path="external/openssh" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/oss-fuzz" path="external/oss-fuzz" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/owasp/sanitizer" path="external/owasp/sanitizer" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/parameter-framework" path="external/parameter-framework" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/pcre" path="external/pcre" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/pdfium" path="external/pdfium" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/perfetto" path="external/perfetto" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/piex" path="external/piex" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/ply" path="external/ply" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/ppp" path="external/ppp" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/proguard" path="external/proguard" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/protobuf" path="external/protobuf" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/psimd" path="external/psimd" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/pthreadpool" path="external/pthreadpool" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/puffin" path="external/puffin" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/apitools" path="external/python/apitools" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/asn1crypto" path="external/python/asn1crypto" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/cffi" path="external/python/cffi" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/cpython2" path="external/python/cpython2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/cpython3" path="external/python/cpython3" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/cryptography" path="external/python/cryptography" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/dateutil" path="external/python/dateutil" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/enum34" path="external/python/enum34" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/funcsigs" path="external/python/funcsigs" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/futures" path="external/python/futures" groups="aosp-android11-release,pdk,vts,qc-common-sys"/>
+  <project name="platform/external/python/google-api-python-client" path="external/python/google-api-python-client" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/httplib2" path="external/python/httplib2" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/ipaddress" path="external/python/ipaddress" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/mock" path="external/python/mock" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/oauth2client" path="external/python/oauth2client" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/parse_type" path="external/python/parse_type" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/pyasn1" path="external/python/pyasn1" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/pyasn1-modules" path="external/python/pyasn1-modules" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/pybind11" path="external/python/pybind11" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/pycparser" path="external/python/pycparser" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/pyopenssl" path="external/python/pyopenssl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/python/rsa" path="external/python/rsa" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/setuptools" path="external/python/setuptools" groups="aosp-android11-release,pdk,vts,qc-common-sys"/>
+  <project name="platform/external/python/six" path="external/python/six" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/python/uritemplates" path="external/python/uritemplates" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/external/rappor" path="external/rappor" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/replicaisland" path="external/replicaisland" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/rmi4utils" path="external/rmi4utils" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/robolectric-shadows" path="external/robolectric-shadows" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/external/roboto-fonts" path="external/roboto-fonts" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/rootdev" path="external/rootdev" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/rust/crates/byteorder" path="external/rust/crates/byteorder" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/rust/crates/libc" path="external/rust/crates/libc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/rust/crates/proc-macro2" path="external/rust/crates/proc-macro2" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/rust/crates/quote" path="external/rust/crates/quote" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/rust/crates/remain" path="external/rust/crates/remain" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/rust/crates/syn" path="external/rust/crates/syn" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/rust/crates/unicode-xid" path="external/rust/crates/unicode-xid" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/scapy" path="external/scapy" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/external/scrypt" path="external/scrypt" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/scudo" path="external/scudo" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/seccomp-tests" path="external/seccomp-tests" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/selinux" path="external/selinux" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/setupcompat" path="external/setupcompat" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/setupdesign" path="external/setupdesign" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/sfntly" path="external/sfntly" groups="aosp-android11-release,pdk,qcom_msm8x26,qc-common-sys-intf"/>
+  <project name="platform/external/shaderc/spirv-headers" path="external/shaderc/spirv-headers" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/shflags" path="external/shflags" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/skia" path="external/skia" groups="aosp-android11-release,pdk,qcom_msm8x26,qc-common-sys-intf"/>
+  <project name="platform/external/skqp" path="external/skqp" groups="aosp-android11-release,cts,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/external/sl4a" path="external/sl4a" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/slf4j" path="external/slf4j" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/smali" path="external/smali" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/snakeyaml" path="external/snakeyaml" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/sonic" path="external/sonic" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/sonivox" path="external/sonivox" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/speex" path="external/speex" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/sqlite" path="external/sqlite" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/squashfs-tools" path="external/squashfs-tools" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/strace" path="external/strace" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/stressapptest" path="external/stressapptest" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/subsampling-scale-image-view" path="external/subsampling-scale-image-view" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/external/swiftshader" path="external/swiftshader" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/tagsoup" path="external/tagsoup" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tcpdump" path="external/tcpdump" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tensorflow" path="external/tensorflow" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/testng" path="external/testng" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tinyalsa" path="external/tinyalsa" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tinycompress" path="external/tinycompress" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tinyxml" path="external/tinyxml" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tinyxml2" path="external/tinyxml2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/toybox" path="external/toybox" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/tremolo" path="external/tremolo" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/turbine" path="external/turbine" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/u-boot" path="external/u-boot" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/ukey2" path="external/ukey2" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/unicode" path="external/unicode" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/v4l2_codec2" path="external/v4l2_codec2" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/v8" path="external/v8" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/vboot_reference" path="external/vboot_reference" groups="aosp-android11-release,pdk-fs,vboot,qc-common-sys"/>
+  <project name="platform/external/virglrenderer" path="external/virglrenderer" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/vixl" path="external/vixl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/vogar" path="external/vogar" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/volley" path="external/volley" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/vulkan-headers" path="external/vulkan-headers" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/vulkan-validation-layers" path="external/vulkan-validation-layers" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/walt" path="external/walt" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/external/wayland_repo" path="external/wayland" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/wayland-protocols" path="external/wayland-protocols" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/webp" path="external/webp" groups="aosp-android11-release,pdk,qcom_msm8x26,qc-common-sys-intf"/>
+  <project name="platform/external/webrtc" path="external/webrtc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/wycheproof" path="external/wycheproof" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/xmp_toolkit" path="external/xmp_toolkit" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/xz-embedded" path="external/xz-embedded" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/xz-java" path="external/xz-java" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/yapf" path="external/yapf" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys"/>
+  <project name="platform/external/zlib" path="external/zlib" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/zopfli" path="external/zopfli" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/external/zxing" path="external/zxing" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/av" path="frameworks/av" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/base" path="frameworks/base" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/compile/slang" path="frameworks/compile/slang" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/ex" path="frameworks/ex" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/hardware/interfaces" path="frameworks/hardware/interfaces" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/layoutlib" path="frameworks/layoutlib" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/frameworks/libs/modules-utils" path="frameworks/libs/modules-utils" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/frameworks/libs/native_bridge_support" path="frameworks/libs/native_bridge_support" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/frameworks/libs/net" path="frameworks/libs/net" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/libs/systemui" path="frameworks/libs/systemui" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/minikin" path="frameworks/minikin" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/ml" path="frameworks/ml" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/multidex" path="frameworks/multidex" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/native" path="frameworks/native" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/car/services" path="frameworks/opt/car/services" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/car/setupwizard" path="frameworks/opt/car/setupwizard" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/frameworks/opt/chips" path="frameworks/opt/chips" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/colorpicker" path="frameworks/opt/colorpicker" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/net/ims" path="frameworks/opt/net/ims" groups="aosp-android11-release,frameworks_ims,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/setupwizard" path="frameworks/opt/setupwizard" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/tv/tvsystem" path="frameworks/opt/tv/tvsystem" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/frameworks/rs" path="frameworks/rs" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/hardware/google/apf" path="hardware/google/apf" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/google/av" path="hardware/google/av" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/hardware/google/camera" path="hardware/google/camera" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/hardware/google/easel" path="hardware/google/easel" groups="aosp-android11-release,easel,pdk,qc-common-sys"/>
+  <project name="platform/hardware/google/interfaces" path="hardware/google/interfaces" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/hardware/interfaces" path="hardware/interfaces" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/libhardware" path="hardware/libhardware" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/nxp/nfc" path="hardware/nxp/nfc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/nxp/secure_element" path="hardware/nxp/secure_element" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/ril" path="hardware/ril" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/hardware/st/nfc" path="hardware/st/nfc" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/hardware/st/secure_element" path="hardware/st/secure_element" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/hardware/ti/am57x" path="hardware/ti/am57x" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/libcore" path="libcore" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/libnativehelper" path="libnativehelper" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Camera2" path="packages/apps/Camera2" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Car/Calendar" path="packages/apps/Car/Calendar" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Cluster" path="packages/apps/Car/Cluster" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Dialer" path="packages/apps/Car/Dialer" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Hvac" path="packages/apps/Car/Hvac" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/LatinIME" path="packages/apps/Car/LatinIME" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Launcher" path="packages/apps/Car/Launcher" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/LinkViewer" path="packages/apps/Car/LinkViewer" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/LocalMediaPlayer" path="packages/apps/Car/LocalMediaPlayer" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Media" path="packages/apps/Car/Media" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Messenger" path="packages/apps/Car/Messenger" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Notification" path="packages/apps/Car/Notification" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Car/Radio" path="packages/apps/Car/Radio" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/RotaryController" path="packages/apps/Car/RotaryController" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/Settings" path="packages/apps/Car/Settings" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/SystemUpdater" path="packages/apps/Car/SystemUpdater" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Car/libs" path="packages/apps/Car/libs" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Car/tests" path="packages/apps/Car/tests" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Contacts" path="packages/apps/Contacts" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/DevCamera" path="packages/apps/DevCamera" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/packages/apps/Dialer" path="packages/apps/Dialer" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/DocumentsUI" path="packages/apps/DocumentsUI" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/EmergencyInfo" path="packages/apps/EmergencyInfo" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Gallery" path="packages/apps/Gallery" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/KeyChain" path="packages/apps/KeyChain" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/LegacyCamera" path="packages/apps/LegacyCamera" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/ManagedProvisioning" path="packages/apps/ManagedProvisioning" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Messaging" path="packages/apps/Messaging" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Mms" path="vendor/codeaurora/commonsys/packages/apps/Mms" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="app_mms_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_mms_product.mk"/>
+  </project>
+  <project name="platform/packages/apps/Music" path="packages/apps/Music" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Nfc" path="packages/apps/Nfc" groups="aosp-android11-release,apps_nfc,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/OnDeviceAppPrediction" path="packages/apps/OnDeviceAppPrediction" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/PackageInstaller" path="packages/apps/PermissionController" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/PhoneCommon" path="packages/apps/PhoneCommon" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Protips" path="packages/apps/Protips" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Provision" path="packages/apps/Provision" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/QuickAccessWallet" path="packages/apps/QuickAccessWallet" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/SafetyRegulatoryInfo" path="packages/apps/SafetyRegulatoryInfo" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/SampleLocationAttribution" path="packages/apps/SampleLocationAttribution" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/SecureElement" path="packages/apps/SecureElement" groups="aosp-android11-release,apps_se,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Settings" path="packages/apps/Settings" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/SettingsIntelligence" path="packages/apps/SettingsIntelligence" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/SnapdragonMusic" path="vendor/codeaurora/commonsys/packages/apps/SnapdragonMusic" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="app_snapMusic_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_snapMusic_product.mk"/>
+  </project>
+  <project name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Stk" path="packages/apps/Stk" groups="aosp-android11-release,apps_stk,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/StorageManager" path="packages/apps/StorageManager" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/TV" path="packages/apps/TV" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/packages/apps/Tag" path="packages/apps/Tag" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Terminal" path="packages/apps/Terminal" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/Test/connectivity" path="packages/apps/Test/connectivity" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/packages/apps/ThemePicker" path="packages/apps/ThemePicker" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/TimeZoneData" path="packages/apps/TimeZoneData" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/packages/apps/TimeZoneUpdater" path="packages/apps/TimeZoneUpdater" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/Traceur" path="packages/apps/Traceur" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/WallpaperPicker" path="packages/apps/WallpaperPicker" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/apps/WallpaperPicker2" path="packages/apps/WallpaperPicker2" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/inputmethods/LeanbackIME" path="packages/inputmethods/LeanbackIME" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/modules/ArtPrebuilt" path="packages/modules/ArtPrebuilt" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/packages/modules/CaptivePortalLogin" path="packages/modules/CaptivePortalLogin" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/CellBroadcastService" path="packages/modules/CellBroadcastService" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/Cronet" path="packages/modules/Cronet" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/modules/DnsResolver" path="packages/modules/DnsResolver" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/ExtServices" path="packages/modules/ExtServices" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/IPsec" path="packages/modules/IPsec" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/ModuleMetadata" path="packages/modules/ModuleMetadata" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/packages/modules/NetworkPermissionConfig" path="packages/modules/NetworkPermissionConfig" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/NetworkStack" path="packages/modules/NetworkStack" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/SdkExtensions" path="packages/modules/SdkExtensions" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/modules/vndk" path="packages/modules/vndk" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/BlockedNumberProvider" path="packages/providers/BlockedNumberProvider" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/BookmarkProvider" path="packages/providers/BookmarkProvider" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/CallLogProvider" path="packages/providers/CallLogProvider" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/providers/TvProvider" path="packages/providers/TvProvider" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/screensavers/Basic" path="packages/screensavers/Basic" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/services/AlternativeNetworkAccess" path="packages/services/AlternativeNetworkAccess" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/services/BuiltInPrintService" path="packages/services/BuiltInPrintService" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/services/Car" path="packages/services/Car" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/services/Mms" path="packages/services/Mms" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/services/Mtp" path="packages/services/Mtp" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/services/Telecomm" path="packages/services/Telecomm" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/services/Telephony" path="packages/services/Telephony" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/packages/wallpapers/ImageWallpaper" path="packages/wallpapers/ImageWallpaper" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/packages/wallpapers/LivePicker" path="packages/wallpapers/LivePicker" groups="aosp-android11-release,pdk-fs,qc-common-sys"/>
+  <project name="platform/pdk" path="pdk" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/platform_testing" path="platform_testing" groups="aosp-android11-release,cts,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/prebuilts/abi-dumps/ndk" path="prebuilts/abi-dumps/ndk" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/abi-dumps/platform" path="prebuilts/abi-dumps/platform" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/abi-dumps/vndk" path="prebuilts/abi-dumps/vndk" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/android-emulator" path="prebuilts/android-emulator" groups="aosp-android11-release,pdk-fs,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/asuite" path="prebuilts/asuite" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/build-tools" path="prebuilts/build-tools" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/bundletool" path="prebuilts/bundletool" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/checkcolor" path="prebuilts/checkcolor" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/checkstyle" path="prebuilts/checkstyle" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/clang-tools" path="prebuilts/clang-tools" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" groups="aosp-android11-release,pdk,cyborg,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/cmdline-tools" path="prebuilts/cmdline-tools" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/devtools" path="prebuilts/devtools" groups="aosp-android11-release,pdk-fs,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/fuchsia_sdk" path="prebuilts/fuchsia_sdk" groups="aosp-android11-release,pdk-fs,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="aosp-android11-release,arm,linux,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="arm,linux,pdk,qcom-LA.UM.7.3-incoming,vendor,qc-common-sys,non_vsdk"/>
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="aosp-android11-release,arm,linux,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="aosp-android11-release,linux,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" groups="aosp-android11-release,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="aosp-android11-release,linux,pdk,x86,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86" groups="aosp-android11-release,linux,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" groups="aosp-android11-release,linux,pdk,tradefed,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" groups="aosp-android11-release,pdk,pdk-cw-fs,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk11" path="prebuilts/jdk/jdk11" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk8" path="prebuilts/jdk/jdk8" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk9" path="prebuilts/jdk/jdk9" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/ktlint" path="prebuilts/ktlint" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/manifest-merger" path="prebuilts/manifest-merger" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/maven_repo/android" path="prebuilts/maven_repo/android" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/misc" path="prebuilts/misc" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/art" path="prebuilts/module_sdk/art" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/ndk" path="prebuilts/ndk" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5" groups="aosp-android11-release,linux,pdk,pdk-cw-fs,pdk-fs,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/qemu-kernel" path="prebuilts/qemu-kernel" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/r8" path="prebuilts/r8" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/remoteexecution-client" path="prebuilts/remoteexecution-client" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/runtime" path="prebuilts/runtime" groups="aosp-android11-release,pdk,qc-common-sys" clone-depth="1"/>
+  <project name="platform/prebuilts/rust" path="prebuilts/rust" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/sdk" path="prebuilts/sdk" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1">
+    <linkfile src="current/androidx-README.md" dest="frameworks/support.md"/>
+  </project>
+  <project name="platform/prebuilts/tools" path="prebuilts/tools" groups="aosp-android11-release,pdk,tools,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v27" path="prebuilts/vndk/v27" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v28" path="prebuilts/vndk/v28" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v29" path="prebuilts/vndk/v29" groups="aosp-android11-release,pdk,qc-common-sys-intf" clone-depth="1"/>
+  <project name="platform/sdk" path="sdk" groups="aosp-android11-release,pdk-cw-fs,pdk-fs,qc-common-sys"/>
+  <project name="platform/system/apex" path="system/apex" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/bpf" path="system/bpf" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/bpfprogs" path="system/bpfprogs" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/bt" path="system/bt" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/ca-certificates" path="system/ca-certificates" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/chre" path="system/chre" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/connectivity/wificond" path="system/connectivity/wificond" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/connectivity/wifilogd" path="system/connectivity/wifilogd" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/system/core" path="system/core" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/extras" path="system/extras" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/gatekeeper" path="system/gatekeeper" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/gsid" path="system/gsid" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/hardware/interfaces" path="system/hardware/interfaces" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/hwservicemanager" path="system/hwservicemanager" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/system/incremental_delivery" path="system/incremental_delivery" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/iorap" path="system/iorap" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/keymaster" path="system/keymaster" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libartpalette" path="system/libartpalette" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libfmq" path="system/libfmq" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libhidl" path="system/libhidl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libhwbinder" path="system/libhwbinder" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libsysprop" path="system/libsysprop" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libufdt" path="system/libufdt" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/libvintf" path="system/libvintf" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/linkerconfig" path="system/linkerconfig" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/media" path="system/media" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/memory/libion" path="system/memory/libion" groups="aosp-android11-release,pdk,qc-common-sys-intf">
+    <linkfile src="." dest="system/core/libion"/>
+  </project>
+  <project name="platform/system/memory/libmeminfo" path="system/memory/libmeminfo" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/memory/libmemtrack" path="system/memory/libmemtrack" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/memory/libmemunreachable" path="system/memory/libmemunreachable" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/memory/lmkd" path="system/memory/lmkd" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/netd" path="system/netd" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/nfc" path="system/nfc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/nvram" path="system/nvram" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/system/security" path="system/security" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/sepolicy" path="system/sepolicy" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/server_configurable_flags" path="system/server_configurable_flags" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/teeui" path="system/teeui" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/testing/gtest_extras" path="system/testing/gtest_extras" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/timezone" path="system/timezone" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/tools/aidl" path="system/tools/aidl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/tools/hidl" path="system/tools/hidl" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/tools/mkbootimg" path="system/tools/mkbootimg" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/tools/sysprop" path="system/tools/sysprop" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/tools/xsdc" path="system/tools/xsdc" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/update_engine" path="system/update_engine" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/system/vold" path="system/vold" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/test/framework" path="test/framework" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/mlts/benchmark" path="test/mlts/benchmark" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/test/mlts/models" path="test/mlts/models" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/test/suite_harness" path="test/suite_harness" groups="aosp-android11-release,cts,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+  <project name="platform/test/vti/dashboard" path="test/vti/dashboard" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vti/fuzz_test_serving" path="test/vti/fuzz_test_serving" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys"/>
+  <project name="platform/test/vti/test_serving" path="test/vti/test_serving" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts" path="test/vts" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/fuzz" path="test/vts-testcase/fuzz" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/hal" path="test/vts-testcase/hal" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/hal-trace" path="test/vts-testcase/hal-trace" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/kernel" path="test/vts-testcase/kernel" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/nbu" path="test/vts-testcase/nbu" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/performance" path="test/vts-testcase/performance" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/security" path="test/vts-testcase/security" groups="aosp-android11-release,pdk,projectarch,vts,qc-common-sys-intf"/>
+  <project name="platform/test/vts-testcase/vndk" path="test/vts-testcase/vndk" groups="aosp-android11-release,pdk,vts,qc-common-sys-intf"/>
+  <project name="platform/tools/acloud" path="tools/acloud" groups="aosp-android11-release,pdk,projectarch,tools,tradefed,vts,qc-common-sys-intf"/>
+  <project name="platform/tools/apifinder" path="tools/apifinder" groups="aosp-android11-release,pdk,tools,qc-common-sys-intf"/>
+  <project name="platform/tools/apksig" path="tools/apksig" groups="aosp-android11-release,pdk,tradefed,qc-common-sys-intf"/>
+  <project name="platform/tools/apkzlib" path="tools/apkzlib" groups="aosp-android11-release,pdk,tradefed,qc-common-sys"/>
+  <project name="platform/tools/asuite" path="tools/asuite" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="platform/tools/currysrc" path="tools/currysrc" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/tools/dexter" path="tools/dexter" groups="aosp-android11-release,pdk-fs,tools,qc-common-sys-intf"/>
+  <project name="platform/tools/doc_generation" path="tools/doc_generation" groups="aosp-android11-release,pdk,tools,qc-common-sys-intf"/>
+  <project name="platform/tools/loganalysis" path="tools/loganalysis" groups="aosp-android11-release,nopresubmit,pdk,tradefed,qc-common-sys-intf"/>
+  <project name="platform/tools/metalava" path="tools/metalava" groups="aosp-android11-release,pdk,tools,qc-common-sys-intf"/>
+  <project name="platform/tools/ndkports" path="tools/ndkports" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/tools/repohooks" path="tools/repohooks" groups="adt-infra,aosp-android11-release,cts,developers,motodev,pdk,tools,tradefed,qc-common-sys-intf"/>
+  <project name="platform/tools/security" path="tools/security" groups="aosp-android11-release,pdk,tools,qc-common-sys"/>
+  <project name="platform/tools/test/connectivity" path="tools/test/connectivity" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/tools/test/graphicsbenchmark" path="tools/test/graphicsbenchmark" groups="aosp-android11-release,pdk,qc-common-sys"/>
+  <project name="platform/tools/tradefederation_repo" path="tools/tradefederation/core" groups="aosp-android11-release,pdk,tradefed,qc-common-sys-intf"/>
+  <project name="platform/tools/tradefederation/contrib" path="tools/tradefederation/contrib" groups="aosp-android11-release,pdk,tradefed,qc-common-sys"/>
+  <project name="platform/tools/trebuchet" path="tools/trebuchet" groups="aosp-android11-release,cts,pdk,pdk-cw-fs,pdk-fs,tools,qc-common-sys-intf"/>
+  <project name="platform/vendor/codeaurora/packages/apps/Dialer" path="vendor/codeaurora/commonsys/packages/apps/Dialer" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/codeaurora/packages/apps/SoundRecorder" path="vendor/codeaurora/commonsys/packages/apps/SoundRecorder" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="app_qtiSoundRecorder_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_qtiSoundRecorder_product.mk"/>
+  </project>
+  <project name="platform/vendor/codeaurora/telephony" path="vendor/codeaurora/commonsys/telephony" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/nxp/interfaces/opensource/nfc" path="vendor/nxp/opensource/interfaces/nfc" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/nxp/opensource/external/libnfc-nci" path="vendor/nxp/opensource/commonsys/external/libnfc-nci" groups="qc-common-sys-intf,non_vsdk"/>
+  <project name="platform/vendor/nxp/opensource/frameworks" path="vendor/nxp/opensource/commonsys/frameworks" groups="qc-common-sys-intf,non_vsdk"/>
+  <project name="platform/vendor/nxp/opensource/packages/apps/Nfc" path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="nfc_system_product.mk" dest="vendor/qcom/defs/product-defs/system/nfc-system-product.mk"/>
+  </project>
+  <project name="platform/vendor/qcom-opensource/audio" path="vendor/qcom/opensource/commonsys/audio" groups="qc-common-sys-intf,non_vsdk"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/commonsys/bluetooth" groups="qc-common-sys,non_vsdk"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/bluetooth" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="bt-system-qssi-board.mk" dest="vendor/qcom/defs/board-defs/system/bt-system-qssi-board.mk"/>
+    <linkfile src="bt-system-opensource-product.mk" dest="vendor/qcom/defs/product-defs/system/bt-system-opensource-product.mk"/>
+  </project>
+  <project name="platform/vendor/qcom-opensource/bluetooth_ext" path="vendor/qcom/opensource/commonsys/bluetooth_ext" groups="qc-common-sys-intf,non_vsdk"/>
+  <project name="platform/vendor/qcom-opensource/core-utils" path="vendor/qcom/opensource/core-utils" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="build/QSSI_violators.mk" dest="vendor/qcom/build/tasks/QSSI_violators.mk"/>
+    <linkfile src="build/QMAA_enforcement.mk" dest="vendor/qcom/build/tasks/QMAA_enforcement.mk"/>
+    <linkfile src="build/vendor_prop_context_restriction.mk" dest="vendor/qcom/build/tasks/vendor_prop_context_restriction.mk"/>
+    <linkfile src="image_generation_tool/generate_vendor_bundle.mk" dest="vendor/qcom/build/tasks/generate_vendor_bundle.mk"/>
+    <linkfile src="image_generation_tool/config/image_generation_tool_product.mk" dest="vendor/qcom/defs/product-defs/vendor/image_generation_tool_product.mk"/>
+    <linkfile src="build/build.sh" dest="build.sh"/>
+    <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk"/>
+    <linkfile src="build/stop_scan.mk" dest="disregard/Android.mk"/>
+  </project>
+  <project name="platform/vendor/qcom-opensource/cryptfs_hw" path="vendor/qcom/opensource/commonsys/cryptfs_hw" groups="qc-common-sys-intf,non_vsdk"/>
+  <project name="platform/vendor/qcom-opensource/dataservices-commonsys" path="vendor/qcom/opensource/commonsys/dataservices" groups="qc-common-sys,non_vsdk"/>
+  <project name="platform/vendor/qcom-opensource/display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display" groups="qc-common-sys-intf,vsdk">
+    <linkfile src="config/display-product-system.mk" dest="vendor/qcom/defs/product-defs/system/display-product-system.mk"/>
+    <linkfile src="config/display-interfaces-product.mk" dest="vendor/qcom/defs/product-defs/vendor/display-interfaces-product.mk"/>
+  </project>
+  <project name="platform/vendor/qcom-opensource/dpm-commonsys" path="vendor/qcom/opensource/commonsys/dpm" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/qcom-opensource/fm-commonsys" path="vendor/qcom/opensource/commonsys/fm" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/qcom-opensource/interfaces" path="vendor/qcom/opensource/interfaces" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/qcom-opensource/packages/apps/Bluetooth" path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" groups="qc-common-sys-intf,non_vsdk"/>
+  <project name="platform/vendor/qcom-opensource/system/bt" path="vendor/qcom/opensource/commonsys/system/bt" groups="qc-common-sys-intf,vsdk"/>
+  <project name="platform/vendor/qcom-opensource/wfd-commonsys" path="vendor/qcom/opensource/commonsys-intf/wfd" groups="qc-common-sys-intf,vsdk"/>
+  <project name="toolchain/pgo-profiles" groups="aosp-android11-release,pdk,qc-common-sys-intf"/>
+  <project name="tools/platform-compat" groups="aosp-android11-release,pdk,pdk-cw-fs,pdk-fs,qc-common-sys-intf"/>
+</manifest>
