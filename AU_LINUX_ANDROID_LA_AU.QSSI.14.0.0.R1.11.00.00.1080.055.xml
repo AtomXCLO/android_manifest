@@ -125,7 +125,7 @@
   <project remote="clo-la" name="platform/external/bc" path="external/bc" revision="211da69ae75405023c29340e4e45b7c3fcccc2af" upstream="refs/heads/aosp.lnx.14.0.r6-rel" groups="aosp,qc-common-sys-intf"/>
   <project remote="clo-la" name="platform/external/bcc" path="external/bcc" revision="833045ec42dd950a3aeb7451fc3f44f95756ca1e" upstream="refs/heads/aosp.lnx.14.0.r6-rel" groups="aosp,qc-common-sys-intf"/>
   <project remote="clo-la" name="platform/external/blktrace" path="external/blktrace" revision="d300bba0e4b3b84fef4cef81b1818cbc194a5b8c" upstream="refs/heads/aosp.lnx.14.0.r6-rel" groups="aosp,qc-common-sys"/>
-  <project remote="clo-la" name="platform/external/boost-submodules/boost" path="external/boost" revision="0ebdb18a7adffd698dd6cbd78288528e260f2e9e" upstream="refs/heads/auto-soa-infra.lnx.1.2.r3-rel" groups="qc-common-sys-intf"/>
+  <project remote="clo-la" name="platform/external/boost-submodules/boost" path="external/boost" revision="0ebdb18a7adffd698dd6cbd78288528e260f2e9e" sync-s="true" upstream="refs/heads/auto-soa-infra.lnx.1.2.r3-rel" groups="qc-common-sys-intf"/>
   <project remote="clo-la" name="platform/external/boringssl" path="external/boringssl" revision="ea1c665c822ab4916fddfbea64ec1a3c3963d96d" upstream="refs/heads/aosp.lnx.14.0.r6-rel" groups="aosp,qc-common-sys-intf"/>
   <project remote="clo-la" name="platform/external/bouncycastle" path="external/bouncycastle" revision="ccc6f438433e5c5b25f0af94e04ff7c324f2941c" upstream="refs/heads/aosp.lnx.14.0.r6-rel" groups="aosp,qc-common-sys-intf"/>
   <project remote="clo-la" name="platform/external/bpftool" path="external/bpftool" revision="f847fd7131b17b32364e9e4d7c26fafa03eb2dfd" upstream="refs/heads/aosp.lnx.14.0.r6-rel" groups="aosp,qc-common-sys"/>
