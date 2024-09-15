@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- AOSP -->
+  <remote name="aosp"
+          fetch="https://android.googlesource.com"
+          sync-c="true"
+          sync-tags="false"
+          review="https://android-review.googlesource.com/"
+          revision="refs/tags/android-15.0.0_r1" />
+
+  <!-- CLO -->
+  <remote name="clo-la"
+          fetch="https://git.codelinaro.org/clo/la"
+          sync-c="true"
+          sync-tags="false" />
+
+  <default remote="clo-la"/>
+
+  <include name="system.xml"/>
+  <include name="vendor.xml"/>
+
+  <!-- AOSPA -->
+  <remote  name="atomx"
+           fetch=".."
+           revision="void"/>
+
+  <remote  name="bitbucket"
+           fetch="https://bitbucket.org"
+           revision="void" />
+
+  <remote  name="blobs"
+           fetch="https://github.com/SorryLuigi"
+           revision="void" />
+
+  <remote  name="blobs-gitlab"
+           fetch="https://gitlab.com/SorryLuigi"
+           revision="void" />
+
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <remote  name="github-ssh"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com" />
+
+  <include name="aosp.xml"/>
+  <include name="atomx.xml"/>
+  <include name="obsolete.xml"/>
+
+</manifest>

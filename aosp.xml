@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Bootable -->
+  <project path="bootable/deprecated-ota" name="platform/bootable/deprecated-ota" remote="aosp" />
+  
+</manifest>
