@@ -138,4 +138,5 @@
   <project path="vendor/qcom/opensource/thermal-hal" name="AtomXCLO/android_hardware_qcom_thermal" remote="atomx" />
   <remove-project name="platform/vendor/qcom-opensource/data-ipa-cfg-mgr" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="AtomXCLO/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="atomx" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy" name="AtomXCLO/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="atomx" revision="void-legacy" />
 </manifest>
