@@ -77,6 +77,8 @@
   <project path="packages/apps/Settings" name="AtomXCLO/android_packages_apps_Settings" remote="atomx" />
   <remove-project name="platform/packages/apps/ThemePicker" />
   <project path="packages/apps/ThemePicker" name="AtomXCLO/android_packages_apps_ThemePicker" remote="atomx" />
+  <remove-project name="platform/packages/apps/WallpaperPicker2" />
+  <project path="packages/apps/WallpaperPicker2" name="AtomXCLO/android_packages_apps_WallpaperPicker2" remote="atomx" />
   <project path="packages/services/SmartSpace" name="AtomXCLO/android_packages_services_SmartSpace" remote="atomx" />
 
   <!-- Packages (AtomX) -->
